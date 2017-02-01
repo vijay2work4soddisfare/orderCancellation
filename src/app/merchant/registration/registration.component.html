@@ -1,0 +1,94 @@
+<fieldset class="out">
+	<legend class="center"> Register </legend>
+	<form [formGroup]="registerForm">
+		<fieldset formGroupName="contactInfo" class="in">
+			<legend>Contact Info : </legend>
+			<table>
+				<tr>
+					<td>
+						<label>Name</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="Name" formControlName="name" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Mobile</label>
+					</td>	
+					<td>
+						<input type="number" placeholder="Mobile" formControlName="mobile" class="right">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset formGroupName="address" class="in">
+			<legend>Address : </legend>
+			<table>
+				<tr>
+					<td>
+						<label>Country</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="Country" formControlName="country" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>State</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="State" formControlName="state" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>District</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="District" formControlName="district" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>City</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="City" formControlName="city" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Zip</label>
+					</td>	
+					<td>
+						<input type="number" placeholder="Zip" formControlName="zip" class="right">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset formGroupName="service" class="in">
+			<legend>Service : </legend>
+			<table>
+				<tr>
+					<td>
+						<label>Type of service</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="Type of service" formControlName="type" class="right">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Service Location</label>
+					</td>	
+					<td>
+						<input type="text" placeholder="Service Location" formControlName="area" class="right">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<button class="right" (click)="displayOnConsole()">Finished</button>
+	</form>
+</fieldset>
+<div>{{registerForm.value | json}}</div>

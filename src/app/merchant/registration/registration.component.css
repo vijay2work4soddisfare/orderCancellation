@@ -1,0 +1,18 @@
+.in{
+	width:295px;
+	margin:auto;
+}
+.out{
+	width: 350px;
+	align-items: center;
+	align-items: center;
+}
+.center{
+	text-align: center;
+}
+.right{
+	float: right;
+}
+table{
+	width: 100%;
+}
