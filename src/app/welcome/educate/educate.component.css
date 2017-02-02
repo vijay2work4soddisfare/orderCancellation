@@ -1,0 +1,12 @@
+.fill-empty{
+	flex:1 1 auto;
+}
+.anim{
+	margin:20px;
+}
+.right{
+	float: right;
+}
+md-card{
+  background-color: #b0becc;
+}

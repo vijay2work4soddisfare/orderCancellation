@@ -1,0 +1,17 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+.sign{
+	margin:20px;
+}
+.orange{
+	background-color: #ff9900;
+	color: white;
+}
+.blue{
+	background-color: #0066ff;
+	color: white;
+}
+md-card{
+  background-color: #b0becc;
+}

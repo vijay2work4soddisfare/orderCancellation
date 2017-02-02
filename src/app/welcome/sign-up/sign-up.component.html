@@ -1,2 +1,7 @@
-<div>Vender : <button (click)="loginM()">SignUp/Login</button></div>
-<div>Personal : <button (click)="loginC()">SignUp/Login</button></div>
+<md-card class="sign">
+<md-card-title align="center">SignUp / Login</md-card-title>
+<md-card-actions align="center">
+	<button (click)="loginM()" md-raised-button class="orange">Vendors</button>
+	<button (click)="loginC()" md-raised-button class="blue">Customers</button>
+</md-card-actions>
+</md-card>

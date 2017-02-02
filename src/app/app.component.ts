@@ -8,6 +8,6 @@ import { Router,ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
 	constructor(public router: Router, public r: ActivatedRoute){
-		this.router.navigate(['../', 'introduction'], {relativeTo: this.r});
+		this.router.navigate(['../', 'welcome'], {relativeTo: this.r});
 	}
 }

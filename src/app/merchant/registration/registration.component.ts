@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { AngularFire } from 'angularfire2';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -9,7 +9,7 @@ import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Valida
 export class RegistrationComponent implements OnInit {
   finished=false;
   registerForm : FormGroup;
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder, private af:AngularFire) {
   	this.registerForm=this.fb.group({
 	  	contactInfo : this.fb.group({
 	    	name : '',

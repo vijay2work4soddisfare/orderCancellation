@@ -10,7 +10,7 @@ export class IntroComponent implements OnInit {
 
   constructor(public router: Router, public r: ActivatedRoute) { }
   ok(){
-  	this.router.navigate(['../', 'welcome'], {relativeTo: this.r});
+  	this.router.navigate(['../', 'introduction'], {relativeTo: this.r});
   }
   ngOnInit() {
   }

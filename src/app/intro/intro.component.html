@@ -1,5 +1,9 @@
-<div style="margin:auto;">
-	<h3 style="text-align: center;">Welcome</h3>
-	<p>Save your daily news paper and milk bills. Each coin counts!</p>
-	<button style="margin: auto;align-self: center;" *ngIf="!clicked" (click)="clicked=true;ok();">Ok</button>
+<div class="center">
+	<div style="font-family: 'Pacifico', serif;">    
+		<p>Welcome</p>
+		<p>Save your daily news paper and milk bills. Each coin counts!</p>
+		<div class='submitWrapper'>  
+			<button *ngIf="!clicked" (click)="clicked=true;ok();">Let's save some</button>
+		</div>
+	</div>
 </div>

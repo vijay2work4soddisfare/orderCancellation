@@ -1,0 +1,17 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+md-sidenav-container{
+	background-color: #d9d9d9;
+	overflow: hidden;
+}
+.menuBtn{
+	width:110px;
+	margin: 4px;
+}
+.space{
+	margin: 5px;
+}
+.heig{
+	padding: 10px;
+}

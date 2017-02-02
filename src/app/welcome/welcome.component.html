@@ -1,0 +1,23 @@
+<md-sidenav-container fullscreen align="center">
+	<md-toolbar color="primary">
+		<span><button (click)="sideopen.toggle()" md-icon-button><md-icon>menu</md-icon></button></span>
+		<span>Application Title</span>
+
+		<!-- This fills the remaining space of the current row -->
+		<span class="example-fill-remaining-space"></span>
+
+		<span>
+			<button md-raised-button *ngIf="!(af.auth | async)" color="accent" (click)="login()">Login</button>
+			<button md-raised-button *ngIf="(af.auth | async)" color="accent" (click)="logout()">Logout</button>
+		</span>
+	</md-toolbar>
+	<md-sidenav #sideopen [mode]="'push'">
+		<div class="space heig"></div>
+		<div class="space"><button md-raised-button color="primary" class="menuBtn">Testimonials</button></div>
+		<div class="space"><button md-raised-button color="primary" class="menuBtn">About</button></div>
+		<div class="space"><button md-raised-button color="primary" class="menuBtn">Contact</button></div>
+		<div class="space"><button md-raised-button color="primary" class="menuBtn">Help</button></div>
+	</md-sidenav>
+	<app-educate></app-educate>
+	<app-sign-up></app-sign-up>
+</md-sidenav-container>

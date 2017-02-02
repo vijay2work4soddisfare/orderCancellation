@@ -2,14 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 const ROUTES: Routes = [
   { path: '', component: AppComponent },
-  { path: 'introduction', component: IntroComponent },
-  { path: 'welcome',  loadChildren: 'app/welcome/welcome.module#WelcomeModule'},
+  { path: 'welcome', component: IntroComponent },
+  { path: 'introduction',  loadChildren: 'app/welcome/welcome.module#WelcomeModule', data: { preload: true }},
   { path: 'merchant',  loadChildren: 'app/merchant/merchant.module#MerchantModule'},
   { path: 'customer',  loadChildren: 'app/customer/customer.module#CustomerModule'}
 ];
@@ -22,7 +22,9 @@ const ROUTES: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES, {
+      preloadingStrategy: PreloadAllModules
+    }),
     HttpModule
   ],
   providers: [],
